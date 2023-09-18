@@ -10,11 +10,11 @@ dotenv.config();
 const router = express.Router();
 
 // LINK CLOUDINARY WITH CONFIG
-cloudinary.config({ 
-  cloud_name: 'dv1s9rxma', 
-  api_key: '379947593562385', 
-  api_secret: 'Rk9F6fY1tV2rOQekP8Pa_0FbzM8' 
-});
+// cloudinary.config({ 
+//   cloud_name: 'dv1s9rxma', 
+//   api_key: '379947593562385', 
+//   api_secret: 'Rk9F6fY1tV2rOQekP8Pa_0FbzM8' 
+// });
 
 // GET ALL POSTS
 router.route('/').get(async(req, res) => {
