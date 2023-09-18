@@ -13,13 +13,13 @@ const openai = new OpenAI({
 });
 
 router.route('/').get((req, res) => {
-    res.send('Hello From Dalle routes')
+    res.send('GET Route From Dalle routes')
 })
 
 router.route('/').post(async (req, res) => {
     try {
         console.log('REQ BODY: ',req.body);
-        const {prompt} = req.body || 'Two futuristic towers with a skybridge covered in lush foliage, digital art';
+        const {prompt} = req.body;
         console.log('prompt', prompt)
         const apiResponse = await openai.images.generate({
             prompt,

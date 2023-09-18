@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 8080;
 
 // Add middlewares
 app.use(cors());
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '100mb' }));
 // app.use(express.json)  // This is making server load and load in browser so commenting it for now
 
 // Add Routes
