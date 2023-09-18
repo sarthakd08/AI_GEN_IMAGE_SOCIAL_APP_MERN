@@ -21,7 +21,7 @@ function CreatePost() {
     if(form.prompt) {
       setGeneratingImg(true)
     try { 
-          const response = await fetch('http://localhost:8080/api/v1/dalle', 
+          const response = await fetch('https://ai-gen-mern.onrender.com/api/v1/dalle', 
           {
             method: 'POST',
             headers: {
@@ -51,7 +51,7 @@ function CreatePost() {
       
       try {
         console.log('POSTING WITH DATA => ', form)
-        const response = await fetch('http://localhost:8080/api/v1/posts', {
+        const response = await fetch('https://ai-gen-mern.onrender.com/api/v1/posts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
